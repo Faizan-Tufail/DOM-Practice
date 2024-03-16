@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="text-align: center; background: #000; color: #ffff; font-size: larger;" >
+    
+<div class="week">
+    <div class="day">Monday</div><br>
+    <div class="day">Tuesday</div><br>
+    <div class="day">Wednesday</div><br>
+    <div class="day">Thursday</div><br>
+    <div class="day">Friday</div><br>
+</div>
+
+
+<script>
+
+    // const weeek = document.querySelector('.day').innerHTML
+    // console.log(weeek)
+
+    //              We can access the children items of the parent class with this command
+    
+    
+    // const parent = document.querySelector('.week')
+    // console.log(parent.children)
+
+
+
+    //              We can  also access any specific child of the parent class with this command
+    
+    const parent = document.querySelector('.week')
+    // console.log(parent.children[3].innerHTML);
+
+
+ //             We can get the items within the parent using loops as follow:
+
+    for (let i = 0; i < parent.children.length; i++) {
+        console.log(parent.children[i].innerHTML);
+        
+    }
+
+    
+ //             Let's give some styling to our children text.
+
+ console.log(parent.children[2].style.color='blue');
+
+ 
+ console.log(parent.children[3].style.padding='7px');
+
+
+ //            We can also get the first or last element child as follow:
+
+console.log(parent.firstElementChild.innerHTML ,'<br>');
+
+ console.log(parent.lastElementChild.innerHTML ,'<br>');
+
+
+
+
+
+//                 We can also access the parent Element let's see how:
+
+    const dayone= document.querySelector('.day')
+    // console.log("This is Parent Element: ",dayone.parentElement);
+
+
+//                 We can also access the next sibling Element let's see how:
+
+// console.log("This is Next Element: ",dayone.nextElementSibling)
+
+
+
+
+
+
+            //                                         Let's understand the concept of NODES
+
+
+
+            //             => Node basically includes everything within the selected div or tag, even it counts the empty spaces,line break as           as an individual units.
+            
+            //             => When working with webpages and the DOM, "node" refers to the building blocks of the HTML structure.
+
+            console.log(parent.childNodes);
+
+
+
+
+
+
+ //                                             Let's learn how to create new Element in js.
+
+                //    We can create a new Element in JS in this way:
+
+             const div = document.createElement('div')
+             console.log(div)
+
+                    //    Also we can give id, class, attributes, style to it..
+
+                    div.className='main div'
+                    // div.id ='div id'
+
+                //    Let's make some fun with JS by generating random values of Id..😅
+
+
+                //     Math.round round off the value while Math.random generates random values everytime.
+
+                div.id = Math.round(Math.random()*10);  
+
+                div.setAttribute("title", "generated title")
+
+                div.style.color= 'purple';
+
+                //   Let's give the name to our div
+
+                const addtext = document.createTextNode("Div created by JS")
+                div.appendChild(addtext)
+
+
+                //     Now it's time to display the div on web page with this command
+
+                document.body.appendChild(div)
+
+
+
+
+</script>
+
+
+</body>
+
+
+
+</html>
