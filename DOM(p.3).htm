@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head >
+<body style="color: white;background-color: black; ">
+    <h2>Creating list with JS</h2>
+
+    <ul class="language">
+        <li>JavaScript</li>
+    
+    </ul>
+</body>
+<script>
+
+    // Let's create a list item using Functions in JS
+
+    function addlang (langName){
+        const li = document.createElement('li');
+        li.innerHTML = `${langName}`
+        document.querySelector('.language').appendChild(li)
+    
+
+    }
+
+    addlang("Python")
+    addlang("Java")
+
+
+function anotherlang (aolang){
+    const aoli = document.createElement('li')
+    aoli.innerHTML= `${aolang}`
+    document.querySelector('.language').appendChild(aoli)
+}
+
+  anotherlang("TypeScript")
+
+
+//   There is another way also by which we can add the list item using function..
+ 
+function anotherway(langName) {
+    const li = document.createElement('li')
+    li.appendChild(document.createTextNode(langName))
+    document.querySelector('.language').appendChild(li)
+}
+
+anotherway("Golang")
+
+
+
+//   Let's learn how to edit or replace the values in JS there are multiple ways to do that.. 
+
+const seclang = document.querySelector("li:nth-child(2)")
+seclang.innerHTML ="Mongo DB"
+
+
+//  Here is another way to do the same thing.
+
+const thirdlang = document.querySelector("li:nth-child(3)")
+const newli = document.createElement('li')
+newli.textContent = "Node JS"
+
+thirdlang.replaceWith(newli)
+
+//  ................
+
+const firstlang = document.querySelector("li:first-child")
+const replacing_li = document.createElement('li')
+replacing_li.textContent = "React JS"
+firstlang.replaceWith(replacing_li)
+
+
+
+//  Here is another way to do the same thing using outerHTML.
+
+const fourthlang = document.querySelector("li:nth-child(4)")
+fourthlang.outerHTML = "<li> Express JS </li>"
+
+
+
+//         Let's learn how to remove any element in JS
+
+//  Let say I want to remove the last child of ul list..
+
+const lastchild = document.querySelector("li:last-child")
+lastchild.remove()
+
+
+
+</script>
+</html>
