@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head >
+<body style="color: white;background-color: black; ">
+    <h2>Creating list with JS</h2>
+
+    <ul class="language">
+        <li>JavaScript</li>
+        <li>Pytho</li>
+    </ul>
+</body>
+<script>
+
+    // Let's create a list item using Functions in JS
+
+    function addlang (langName){
+        const li = document.createElement('li');
+        li.innerHTML = `${langName}`
+        document.querySelector('.language')
+        appendChild(li)
+    
+
+    }
+
+    addlang("Python")
+
+</script>
+</html>
